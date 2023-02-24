@@ -3,7 +3,15 @@
 }*/
 body {
 	vertical-align: middle;
+	font-family: bpg_arial_2009;
+	font-family: oswald;
 }
+
+@font-face {
+	font-family: "bpg_arial_2009";
+	src: local("bpg_arial_2009"),
+	  url("../fonts/bpg_arial_2009.ttf")
+  }
 
 /* header style */
 
@@ -21,6 +29,7 @@ header {
 			width: 100%;
 			padding-top: 10px;
 			padding-bottom: 10px;
+			font-family: oswald;
 		}
 
 
@@ -75,7 +84,7 @@ img {
 .box {
 height: 800px;
 width: 100%;
-background: gainsboro;
+background: white;
 display: flex;
 justify-content: center;
 align-content: center;
@@ -100,13 +109,14 @@ line-height: 100%;
 	top: 70px;
 	font-size: x-large;
 	font-style: italic;
-	color: aliceblue;
+	color: white;
 }
 
 
 .annecy {
 	position: absolute;
 	height: 30px;
+	width: auto;
 	left: 100px;
 	bottom: 70px;
 }
@@ -116,12 +126,13 @@ line-height: 100%;
 /* video box */
 
 .trailer-box {
-	background-color: wheat;
+	background-color:lightcyan;
 	height: 640px;
 	padding: 30px 0px;
 	font-size: x-large;
 	font-style: italic;
 	display: block;
+	/* font-family: bpg_arial_2009 */
 }
 
 .trailer-box h1{
@@ -157,3 +168,36 @@ text-decoration: overline;
 	display: flex;
 }
 /* video box */
+
+/* four-box */
+.four-box {
+	background-color:white;
+	height: 300px;
+	width: 100%;
+	padding: 30px 0px;
+	display: block;
+}
+
+.four-box-parent {
+	padding: 30px 0px;
+	height: 240px;
+	width: 100%;
+	display: flex;
+}
+
+.box-photo {
+	background-color: azure;
+	height: 240px;
+	width: 360px;
+	display: inline-block;
+	vertical-align: middle;
+	margiN: 0px 55px;
+}
+
+img {
+	display: inline-block;
+	width: 100%;
+}
+style {
+	font-family:agre
+}
