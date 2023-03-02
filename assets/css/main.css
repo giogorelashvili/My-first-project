@@ -14,6 +14,9 @@ body {
 	  url("../fonts/bpg_extrasquare_mtavruli_2009.ttf")
   }
 
+
+
+
 /* header style */
 
 /* clear */
@@ -23,22 +26,29 @@ body {
 	clear: both;
 }
 header {
-			height: 80px;
-			margin-top: 0px;
-			background: whitesmoke;
-			width: 100%;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			font-family: oswald;
-		}
+	height: 80px;
+	margin-top: 0px;
+	background: whitesmoke;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: oswald;
+	z-index: 20;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 
 .container {
-	width: 1300px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	height: 80px;
-	vertical-align: middle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .logo-parent {
@@ -55,30 +65,51 @@ img {
 
 .nav-list {
 	display: inline-block;
-	vertical-align: middle;
 	margin-left: 50px;
 	margin-right: 50px;
+	vertical-align: middle;
 }
 
 
 .header-nav {
-	display: inline-block;
-	vertical-align: middle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-left: 100px;
 	margin-right: 100px;
 	font-size: x-large;
 	font-style: oblique;
+	flex-direction: row;
 }
 
-.social-icons {
-	background: red;
-	display: inline-block;
+.social-box {
+	display: flex;
 	width: 300px;
-	height: 100%;
-	vertical-align: middle;
+	height: 80px;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+	margin: 0px 25px;
+}
+
+.burger {
+	width: 61px;
+	height: 61px;
+	display: none;
+	float: right;
+	margin-right: 5px;
 }
 
 /* header style */
+
+
+
 
 /* banner */
 .box {
@@ -94,17 +125,21 @@ line-height: 100%;
 .first-box {
 	height: 740px;
 	width: 100%;
-	display: flex;
+	display: block;
 	justify-content: center;
 	align-content: center;
 	line-height: 100%;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	position: relative;
+	min-width: 1024px;
+	z-index: 10;
 }
 
 .zaza {
 	width: 1900px;
+	height: 100%;;
+	/* width: 100%; */
 	display: inline-block;
 }
 
@@ -127,6 +162,10 @@ line-height: 100%;
 }
 
 /* banner */
+
+
+
+
 
 /* video box */
 
@@ -180,21 +219,26 @@ display: flex;
 }
 /* video box */
 
+
+
+
+
 /* four-box */
-.four-box {
+section .four-box {
 	background-color:white;
 	height: 300px;
 	width: 1900px;
 	padding: 30px 0px;
-	display: inline-block;
+	display: flex;
 }
 
 .four-box-parent {
 	padding: 30px 0px;
 	height: 240px;
 	width: 100%;
-	display: inline-block;
+	display: block;
 }
+
 
 .box-photo {
 	background-color: azure;
@@ -202,25 +246,57 @@ display: flex;
 	width: 360px;
 	display: inline-block;
 	vertical-align: middle;
-	margiN: 0px 55px;
+	margin: 25px 55px;
 }
 
 img {
-	display: inline-block;
+	display: block;
 	width: 100%;
 }
-style {
-	font-family:agre
-}
+/* four-box */
+
+
+
+/* Responsive */
 
 @media (max-width: 1024px) {
 	.trailer-box {
 		display: none;
 	}
-	article.box-photo.third {
-		display: none;
+	.header-nav {
+		position: fixed;
+		width: 100%;
+		height: calc(100% - 101px);
+		top: 101px;
+		left: -100%;
+		/* left: 0; */
+		background: gainsboro;
+		margin-left: inherit;
+		transition-property: left;
+		transition-duration: 2s;
+		transition-timing-function: ease-in-out;
+		/* transition-delay: 1s; */
 	}
-	article.box-photo.fourth {
-		display: none;
+	.header-nav.active {
+		left: 0;
+	}
+	.burger {
+		display: inline-block;
 	}
   }
+
+  @media (max-width: 480px) {
+	article.box-photo {
+		margin: 50px 55px;
+		display:block
+	}
+	article.box-photo.first {
+		margin: 25px 55px;
+		display:block
+	}
+	article.box-photo.fourth {
+		margin: 25px 55px;
+		display:block
+	}
+  }
+/* Responsive */
