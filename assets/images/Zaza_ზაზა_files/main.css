@@ -19,7 +19,12 @@ body {
 
 /* header style */
 
-
+/* clear */
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
 header {
 	height: 80px;
 	margin-top: 0px;
@@ -47,9 +52,9 @@ header {
 }
 
 .logo-parent {
-	display: flex;
+	display: inline-block;
 	height: 80px;
-	/* line-height: 100%; */
+	line-height: 100%;
 	width: 80px;
 	vertical-align: middle;
 }
@@ -97,10 +102,12 @@ img {
 	margin: 0px 25px;
 }
 
-div.burger {
+.burger {
 	width: 61px;
 	height: 61px;
 	display: none;
+	float: right;
+	margin-right: 5px;
 }
 
 /* header style */
@@ -264,74 +271,26 @@ img {
 
 /* Responsive */
 
-@media (max-width: 1300px) {
-	.container {
-		justify-content: space-between;
-	}
+@media (max-width: 1024px) {
 	.header-nav {
 		position: fixed;
 		width: 100%;
 		height: calc(100% - 101px);
 		top: 101px;
 		left: -100%;
+		/* left: 0; */
 		background: gainsboro;
 		margin-left: inherit;
 		transition-property: left;
 		transition-duration: 2s;
 		transition-timing-function: ease-in-out;
+		/* transition-delay: 1s; */
 	}
 	.header-nav.active {
 		left: 0;
-		display: flex;
-		flex-direction: column;
-		text-align: center;
 	}
-	div.burger {
+	.burger {
 		display: inline-block;
 	}
-}
-
-  @media (max-width: 580px) {
-	.container {
-		justify-content: space-between;
-	}
-	.header-nav {
-		position: fixed;
-		width: 100%;
-		height: calc(100% - 101px);
-		top: 101px;
-		left: -100%;
-		background: gainsboro;
-		margin-left: inherit;
-		transition-property: left;
-		transition-duration: 2s;
-		transition-timing-function: ease-in-out;
-	}
-	.social-box {
-		position: fixed;
-		width: 100%;
-		height: calc(100% - 101px);
-		top: 101px;
-		left: -100%;
-		background: gainsboro;
-		margin-left: inherit;
-		transition-property: left;
-		transition-duration: 2s;
-		transition-timing-function: ease-in-out;
-	}
-	.social-box.active {
-		left: 0;
-		display: flex;
-		flex-direction: column;
-	}
-	.header-nav.active {
-		left: 0;
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-	}
-	div.burger {
-		display: inline-block;
-	}
-}
+  }
 /* Responsive */
