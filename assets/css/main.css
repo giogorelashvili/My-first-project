@@ -274,10 +274,10 @@ img {
 		height: calc(100% - 101px);
 		top: 101px;
 		left: -100%;
-		background: gainsboro;
+		background: whitesmoke;
 		margin-left: inherit;
 		transition-property: left;
-		transition-duration: 2s;
+		transition-duration: 1s;
 		transition-timing-function: ease-in-out;
 	}
 	.header-nav.active {
@@ -301,10 +301,10 @@ img {
 		height: calc(100% - 101px);
 		top: 101px;
 		left: -100%;
-		background: gainsboro;
+		background: whitesmoke;
 		margin-left: inherit;
 		transition-property: left;
-		transition-duration: 2s;
+		transition-duration: 1s;
 		transition-timing-function: ease-in-out;
 	}
 	.social-box {
@@ -313,10 +313,10 @@ img {
 		height: calc(100% - 101px);
 		top: 101px;
 		left: -100%;
-		background: gainsboro;
+		background: whitesmoke;
 		margin-left: inherit;
 		transition-property: left;
-		transition-duration: 2s;
+		transition-duration: 1s;
 		transition-timing-function: ease-in-out;
 	}
 	.social-box.active {
